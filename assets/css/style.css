@@ -147,6 +147,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--royal); outline
 .btn-ghost:hover { background: var(--royal-soft); }
 .btn:active { transform: scale(0.98); }
 .btn-sm { padding: 8px 14px; font-size: 0.875rem; }
+.btn.is-disabled { opacity: 0.55; cursor: not-allowed; }
+.btn.is-disabled:hover { background: transparent; }
 
 /* ---------- Content column ---------- */
 .content { min-width: 0; display: flex; flex-direction: column; }

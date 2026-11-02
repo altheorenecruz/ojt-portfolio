@@ -1,0 +1,69 @@
+:root {
+  --bg: #f4f6fd;
+  --card: #ffffff;
+  --ink: #0f1733;
+  --muted: #5a6382;
+  --line: #dfe4f3;
+  --royal: #2350d8;
+  --royal-soft: #e6ecfd;
+  --host: #fff1d6;
+  --host-ink: #8a5a00;
+  --red: #c42b2b;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 "Segoe UI", system-ui, sans-serif; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 48px; }
+
+.head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+.kicker { margin: 0; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--royal); }
+h1 { margin: 4px 0 0; font-size: 2rem; }
+.back { color: var(--royal); font-weight: 600; text-decoration: none; white-space: nowrap; }
+
+.input-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.input-card label { font-weight: 600; font-size: 0.9rem; color: var(--muted); }
+.input-row { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.input-row input {
+  font: 600 1.5rem "Consolas", ui-monospace, monospace; color: var(--ink);
+  padding: 10px 12px; border: 2px solid var(--line); border-radius: 10px; background: #fff; min-width: 0;
+}
+#ip { flex: 1; }
+#cidr { width: 90px; }
+.input-row input:focus { outline: none; border-color: var(--royal); }
+.input-row input.invalid { border-color: var(--red); }
+.slash { font: 600 1.6rem ui-monospace, monospace; color: var(--muted); }
+#slider { width: 100%; margin-top: 14px; accent-color: var(--royal); }
+.error { margin: 6px 0 0; min-height: 1.3em; color: var(--red); font-size: 0.9rem; }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.presets button {
+  padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--royal-soft);
+  color: var(--royal); font: 600 0.85rem inherit; font-family: inherit; cursor: pointer;
+}
+.presets button:hover { border-color: var(--royal); }
+
+.results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.cell { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; min-width: 0; }
+.cell.wide { grid-column: span 2; }
+.cell span { display: block; font-size: 0.78rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.cell strong { display: block; margin-top: 4px; font: 600 1.05rem "Consolas", ui-monospace, monospace; overflow-wrap: anywhere; }
+
+.binary { margin-top: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+.binary h2 { margin: 0; font-size: 1.1rem; }
+.legend { display: flex; gap: 16px; margin: 8px 0 12px; font-size: 0.85rem; }
+.legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.net-key::before { background: var(--royal); }
+.host-key::before { background: var(--host); border: 1px solid #e8c98a; }
+.bin-scroll { overflow-x: auto; }
+.bin { display: grid; gap: 6px; min-width: 520px; font: 600 0.95rem "Consolas", ui-monospace, monospace; }
+.bin-row { display: grid; grid-template-columns: 70px repeat(4, auto); gap: 10px; align-items: center; justify-content: start; }
+.bin-row .lbl { font: 600 0.78rem "Segoe UI", sans-serif; color: var(--muted); }
+.octet { display: inline-flex; }
+.bit { width: 15px; text-align: center; padding: 2px 0; }
+.bit.n { background: var(--royal); color: #fff; }
+.bit.h { background: var(--host); color: var(--host-ink); }
+
+@media (max-width: 680px) {
+  .results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .input-row input { font-size: 1.2rem; }
+  h1 { font-size: 1.6rem; }
+}

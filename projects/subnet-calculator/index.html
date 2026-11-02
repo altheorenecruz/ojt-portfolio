@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPv4 Subnet Calculator | Altheorene Cruz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <div>
+        <p class="kicker">Networking tool</p>
+        <h1>IPv4 Subnet Calculator</h1>
+      </div>
+      <a href="../../index.html" class="back">← Portfolio</a>
+    </header>
+
+    <form id="form" class="input-card" autocomplete="off">
+      <label for="ip">IP address</label>
+      <div class="input-row">
+        <input id="ip" value="192.168.10.75" inputmode="decimal" spellcheck="false" aria-describedby="err">
+        <span class="slash">/</span>
+        <input id="cidr" type="number" min="0" max="32" value="26" aria-label="CIDR prefix length">
+      </div>
+      <input id="slider" type="range" min="0" max="32" value="26" aria-label="Prefix length slider">
+      <p class="error" id="err" role="alert"></p>
+      <div class="presets" aria-label="Common examples">
+        <button type="button" data-v="192.168.1.10/24">Home LAN /24</button>
+        <button type="button" data-v="10.0.5.130/27">Office /27</button>
+        <button type="button" data-v="172.16.40.9/30">Point-to-point /30</button>
+      </div>
+    </form>
+
+    <section class="results" aria-live="polite">
+      <div class="cell"><span>Network address</span><strong id="r-net"></strong></div>
+      <div class="cell"><span>Broadcast address</span><strong id="r-bc"></strong></div>
+      <div class="cell"><span>Subnet mask</span><strong id="r-mask"></strong></div>
+      <div class="cell"><span>Wildcard mask</span><strong id="r-wild"></strong></div>
+      <div class="cell wide"><span>Usable host range</span><strong id="r-range"></strong></div>
+      <div class="cell"><span>Usable hosts</span><strong id="r-hosts"></strong></div>
+      <div class="cell"><span>IP class</span><strong id="r-class"></strong></div>
+    </section>
+
+    <section class="binary">
+      <h2>Binary view</h2>
+      <p class="legend"><span class="net-key">Network bits</span><span class="host-key">Host bits</span></p>
+      <div class="bin-scroll"><div id="bin" class="bin"></div></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

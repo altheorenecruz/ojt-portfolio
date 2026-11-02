@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIT Computer Lab Reservation | Altheorene Cruz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div>
+        <p class="kicker">College of Industrial Technology</p>
+        <h1>Computer Lab Reservation</h1>
+      </div>
+      <a href="../../index.html" class="back">← Portfolio</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <div class="labs" id="labs" role="tablist" aria-label="Choose a lab"></div>
+      <p class="legend"><span class="k-open">Open</span><span class="k-class">Class</span><span class="k-res">Reserved</span><span class="k-mine">Your booking</span></p>
+    </div>
+
+    <div class="grid-scroll">
+      <div class="grid" id="grid" aria-label="Weekly schedule"></div>
+    </div>
+
+    <section class="panel" id="panel" aria-live="polite">
+      <p class="hint" id="hint">Select an open slot to reserve it.</p>
+      <form id="form" hidden autocomplete="off">
+        <h2 id="slot-title"></h2>
+        <label>Your name<input id="f-name" required placeholder="e.g. Juan Dela Cruz"></label>
+        <label>Purpose
+          <select id="f-purpose">
+            <option>Thesis / capstone work</option>
+            <option>Group study</option>
+            <option>Make-up laboratory</option>
+            <option>Org meeting</option>
+          </select>
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary">Reserve slot</button>
+          <button type="button" class="btn" id="close">Cancel</button>
+        </div>
+      </form>
+      <div id="detail" hidden></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Altheorene A. Cruz, BIT Computer Technology student at Bulacan State University, seeking a UI/UX Web Designer OJT placement.">
+  <title>Altheorene A. Cruz | OJT Portfolio</title>
+  <script>
+    // Apply the saved theme before the page paints to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+
+  <div class="layout">
+    <!-- ========== PROFILE PANEL (hero) ========== -->
+    <header class="profile" aria-labelledby="hero-name">
+      <div class="profile-inner">
+        <div class="profile-top">
+          <span class="initials" aria-hidden="true">AC</span>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+            <span id="theme-label">Dark</span>
+          </button>
+        </div>
+
+        <img class="photo" src="assets/img/profile.jpg" alt="Portrait of Altheorene A. Cruz in a black suit and tie" width="600" height="600">
+
+        <h1 id="hero-name">Altheorene A. Cruz</h1>
+        <p class="role">UI/UX Web Designer</p>
+        <p class="tagline">Computer Technology student designing clean, usable web interfaces and building them with HTML, CSS and JavaScript.</p>
+
+        <dl class="metrics">
+          <div>
+            <dt>Training hours</dt>
+            <dd><span class="big">500</span> hrs to render</dd>
+          </div>
+          <div>
+            <dt>Available</dt>
+            <dd>2nd Semester, A.Y. 2026–2027</dd>
+          </div>
+        </dl>
+
+        <div class="ctas">
+          <a class="btn btn-primary" href="assets/files/Cruz_Altheorene_CV.pdf" download>Download CV / Resume</a>
+          <a class="btn btn-ghost" href="#contact">Contact / Inquire</a>
+        </div>
+
+        <ul class="channels" aria-label="Direct channels">
+          <li><a href="https://github.com/altheorenecruz" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/altheorene-a-cruz-227984448/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li class="email"><a href="mailto:altheorenecruz0912@gmail.com">altheorenecruz0912@gmail.com</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ========== CONTENT COLUMN ========== -->
+    <div class="content">
+      <nav class="topnav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <!-- ABOUT -->
+        <section id="about" class="block" aria-labelledby="about-title">
+          <h2 id="about-title"><span class="eyebrow">About</span>A designer who also codes</h2>
+          <p class="lead">I'm a Computer Technology student at the College of Industrial Technology, Bulacan State University, and an aspiring UI/UX and front-end web designer. I'm currently building a student violation website for our college. I learn fast, work well in a team, and stay disciplined, focused, and accountable for my work. I want to help a partner company design and build interfaces that are simple to use.</p>
+
+          <h3>Core competencies</h3>
+          <ul class="competencies">
+            <li>UI/UX design and wireframing in Figma</li>
+            <li>Front-end web development with HTML and JavaScript</li>
+            <li>Networking and software troubleshooting</li>
+            <li>Database design with MySQL and MySQL Workbench</li>
+          </ul>
+
+          <h3>Education</h3>
+          <ol class="timeline">
+            <li>
+              <span class="when">2023 – 2027</span>
+              <div>
+                <strong>Bulacan State University – College of Industrial Technology</strong>
+                <p>Bachelor of Industrial Technology, major in Computer Technology · Expected graduation: 2027</p>
+              </div>
+            </li>
+            <li>
+              <span class="when">Senior High</span>
+              <div>
+                <strong>STI College Malolos</strong>
+                <p>Senior High School</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="block" aria-labelledby="skills-title">
+          <h2 id="skills-title"><span class="eyebrow">Skills</span>Technical skills</h2>
+          <div class="skill-table">
+            <div class="skill-row">
+              <h3>Front-end &amp; core web</h3>
+              <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Flexbox</li><li>CSS Grid</li><li>Responsive design</li><li>JavaScript (basic)</li></ul>
+            </div>
+            <div class="skill-row">
+              <h3>Tools &amp; platforms</h3>
+              <ul class="tags"><li>Git / GitHub</li><li>VS Code</li><li>Claude</li><li>ChatGPT</li><li>GitHub Copilot</li></ul>
+            </div>
+            <div class="skill-row">
+              <h3>Design &amp; digital media</h3>
+              <ul class="tags"><li>Figma</li><li>UI/UX wireframing</li><li>Layout prototyping</li></ul>
+            </div>
+            <div class="skill-row">
+              <h3>Programming &amp; databases</h3>
+              <ul class="tags"><li>Java</li><li>Python (basic)</li><li>C++ (basic)</li><li>MySQL</li><li>MySQL Workbench</li></ul>
+            </div>
+            <div class="skill-row">
+              <h3>Industrial &amp; technical foundations</h3>
+              <ul class="tags"><li>Networking</li><li>Computer hardware</li><li>Software troubleshooting</li><li>Arduino</li><li>ESP32</li></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="block" aria-labelledby="projects-title">
+          <h2 id="projects-title"><span class="eyebrow">Projects</span>Featured projects</h2>
+
+          <article class="project">
+            <img src="assets/img/projects/project1.jpg" alt="Screenshot of the IPv4 Subnet Calculator" width="1200" height="750" loading="lazy">
+            <div class="project-body">
+              <div class="project-head">
+                <h3>IPv4 Subnet Calculator</h3>
+                <p class="project-role">Role: UI/UX Designer &amp; Developer</p>
+              </div>
+              <p>A networking tool that turns an IP address and CIDR prefix into the network address, broadcast address, usable host range, and subnet mask. It also shows the address in binary with the network bits highlighted, so students can see how subnetting works instead of memorizing it.</p>
+              <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Networking</li></ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/altheorenecruz/ojt-portfolio/tree/main/projects/subnet-calculator" target="_blank" rel="noopener">Source Code</a>
+                <a class="btn btn-primary btn-sm" href="projects/subnet-calculator/index.html" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="assets/img/projects/project2.jpg" alt="Screenshot of the CIT Computer Lab Reservation weekly schedule" width="1200" height="750" loading="lazy">
+            <div class="project-body">
+              <div class="project-head">
+                <h3>CIT Computer Lab Reservation</h3>
+                <p class="project-role">Role: UI/UX Designer &amp; Front-End Developer</p>
+              </div>
+              <p>A booking interface for reserving college computer labs. Users pick a lab, see the week's schedule as a color-coded grid, and reserve an open time slot with their name and purpose. The system blocks double-booking and lets users cancel their own reservations.</p>
+              <ul class="tags"><li>HTML5</li><li>CSS Grid</li><li>JavaScript</li><li>Figma (wireframe)</li></ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/altheorenecruz/ojt-portfolio/tree/main/projects/lab-reservation" target="_blank" rel="noopener">Source Code</a>
+                <a class="btn btn-primary btn-sm" href="projects/lab-reservation/index.html" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="block contact" aria-labelledby="contact-title">
+          <h2 id="contact-title"><span class="eyebrow">Contact</span>Interested in bringing me onto your team for OJT? Let's connect.</h2>
+          <p class="lead">I'm looking for a 500-hour UI/UX or front-end web design placement. Send me a message and I'll reply with my CV and availability.</p>
+          <a class="btn btn-primary" href="mailto:altheorenecruz0912@gmail.com?subject=OJT%20Inquiry">Email me</a>
+
+          <dl class="contact-list">
+            <div><dt>Email</dt><dd><a href="mailto:altheorenecruz0912@gmail.com">altheorenecruz0912@gmail.com</a></dd></div>
+            <div><dt>Mobile</dt><dd><a href="tel:+639604279470">0960-427-9470</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/altheorene-a-cruz-227984448/" target="_blank" rel="noopener">linkedin.com/in/altheorene-a-cruz-227984448</a></dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/altheorenecruz" target="_blank" rel="noopener">github.com/altheorenecruz</a></dd></div>
+            <div><dt>Address</dt><dd>449 L. Valencia St., Sto. Rosario, City of Malolos, Bulacan</dd></div>
+            <div><dt>Preferred setup</dt><dd>Malolos, Bulacan / Metro Manila / Remote</dd></div>
+          </dl>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 Altheorene A. Cruz. All Rights Reserved.</p>
+        <p>College of Industrial Technology, Bulacan State University</p>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
